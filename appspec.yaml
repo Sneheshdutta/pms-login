@@ -1,0 +1,10 @@
+version: 1.0
+Resources:
+  - TargetService:
+      Type: AWS::ECS::Service
+      Properties:
+        TaskDefinition: "arn:aws:ecs:ap-south-1:176275544602:task-definition/cts-pms-login-td:1"
+        LoadBalancerInfo:
+          ContainerName: "cts-pms-login-container"
+          ContainerPort: "9003"
+        PlatformVersion: "LATEST"
