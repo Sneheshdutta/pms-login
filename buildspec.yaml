@@ -9,7 +9,7 @@ phases:
     - aws --version
     - aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin 176275544602.dkr.ecr.ap-south-1.amazonaws.com
     - TAG="$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | head -c 8)"
-    - IMAGE_URI=176275544602.dkr.ecr.ap-south-1.amazonaws.com/cts-pms-login-repo:${TAG}
+    - IMAGE_URI=176275544602.dkr.ecr.ap-south-1.amazonaws.com/digi-pms-login-repo:${TAG}
   build:
     commands:
     - echo Build started on `date`
